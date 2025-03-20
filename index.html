@@ -45,6 +45,7 @@
             display: flex;
             justify-content: center;
             gap: 20px;
+            flex-wrap: wrap;  /* Isso ajuda a garantir que os ícones não saiam da tela */
         }
 
         .social-links a {
@@ -53,6 +54,8 @@
             display: flex;
             align-items: center;
             gap: 10px;
+            justify-content: center;  /* Garantir que o conteúdo esteja centralizado */
+            padding: 10px;
         }
 
         .social-links a:hover {
@@ -163,6 +166,7 @@
             padding-right: 30px;
             max-width: 600px;  /* Ajustando a largura para ficar mais alinhada com o vídeo */
             margin: 0 auto;
+            box-sizing: border-box;  /* Garantir que o padding não quebre a largura */
         }
 
         .offer-item {
@@ -278,51 +282,25 @@
             background-color: #005b73;
         }
 
-        /* Responsividade aprimorada */
         @media screen and (max-width: 768px) {
             .main-content {
-                flex-direction: column;
-                padding: 20px;
-            }
-
-            .benefits {
                 flex-direction: column;
                 align-items: center;
             }
 
-            .benefit-item {
-                margin-bottom: 30px;
-                max-width: 100%;
+            .benefits {
+                flex-direction: column;
             }
 
             .video-container {
                 flex-direction: column;
                 align-items: center;
-                padding-left: 0;
-                padding-right: 0;
             }
 
             .special-offers {
                 width: 100%;
                 padding: 40px 20px;
-            }
-
-            .cta-section {
-                padding: 30px 20px;
-                margin-top: 20px;
-            }
-
-            .cta-section h2 {
-                font-size: 2em;
-            }
-
-            .cta-section p {
-                font-size: 1.1em;
-                margin-bottom: 20px;
-            }
-
-            .cta-button {
-                font-size: 1.1em;
+                max-width: 90%;  /* Largura máxima de 90% para não ultrapassar a tela */
             }
 
             iframe {
@@ -337,20 +315,7 @@
             }
 
             iframe {
-                max-height: 300px;
-            }
-
-            .cta-section h2 {
-                font-size: 1.8em;
-            }
-
-            .cta-section p {
-                font-size: 1em;
-            }
-
-            .cta-button {
-                font-size: 1.2em;
-                padding: 10px 15px;
+                max-height: 400px;
             }
         }
     </style>
@@ -414,9 +379,10 @@
 <section class="cta-section">
     <h2>Deixe seu ar mais puro: Agende já sua Higienização de Ar-Condicionado!</h2>
     <p>Não comprometa a qualidade do ar que você e sua família ou equipe respiram. Elimine impurezas, bactérias e aumente a eficiência do seu aparelho com nossa higienização profissional.</p>
-    <a href="https://wa.me/5521977342076" class="cta-button">
-        <span class="hand-icon">⚠️</span>Clique Aqui e Fale com Nosso Especialista
-    </a>
+<a href="https://wa.me/5521977342076" class="cta-button">
+    <span class="hand-icon">⚠️</span>Clique Aqui e Fale com Nosso Especialista
+</a>
+
 </section>
 
 </body>
