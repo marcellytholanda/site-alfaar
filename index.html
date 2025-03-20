@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -118,22 +117,22 @@
         /* Estilo do vídeo */
         .video-container {
             display: flex;
-            justify-content: flex-start;
+            justify-content: flex-start; /* Faz o vídeo se alinhar à esquerda */
             align-items: center;
             position: relative;
             gap: 20px;
             width: 100%;
-            padding-left: 30px;
-            padding-right: 20px;
+            padding-left: 30px; /* Distância maior da margem esquerda */
+            padding-right: 20px; /* Ajustando o espaço à direita */
         }
 
         /* Ajustando o tamanho do vídeo para 9:16 */
         .video-wrapper {
             position: relative;
             width: 100%;
-            max-width: 320px;
+            max-width: 320px;  /* Mantendo o tamanho máximo */
             height: 0;
-            padding-bottom: 47%;
+            padding-bottom: 47%; /* 16 / 9 * 100 para obter a altura proporcional */
             overflow: hidden;
             background: #000;
             border-radius: 15px;
@@ -154,15 +153,15 @@
             display: flex;
             flex-direction: column;
             gap: 20px;
-            background-color: #f0f8ff;
+            background-color: #f0f8ff; /* Fundo suave azul claro */
             padding: 67px;
             border-radius: 15px;
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-            border: 2px solid #003366;
+            border: 2px solid #003366; /* Borda azul escuro para contrastar */
             text-align: center;
             padding-left: 30px;
             padding-right: 30px;
-            max-width: 600px;
+            max-width: 600px;  /* Ajustando a largura para ficar mais alinhada com o vídeo */
             margin: 0 auto;
         }
 
@@ -203,8 +202,9 @@
             background-color: #005b73;
         }
 
+        /* Animação da mãozinha piscando */
         .cta-button .hand-icon {
-            margin-right: 10px;
+            margin-right: 10px; /* Mãozinhas antes do texto */
             animation: blink 1s infinite;
         }
 
@@ -278,23 +278,51 @@
             background-color: #005b73;
         }
 
+        /* Responsividade aprimorada */
         @media screen and (max-width: 768px) {
             .main-content {
                 flex-direction: column;
-                align-items: center;
+                padding: 20px;
             }
 
             .benefits {
                 flex-direction: column;
+                align-items: center;
+            }
+
+            .benefit-item {
+                margin-bottom: 30px;
+                max-width: 100%;
             }
 
             .video-container {
                 flex-direction: column;
                 align-items: center;
+                padding-left: 0;
+                padding-right: 0;
             }
 
             .special-offers {
                 width: 100%;
+                padding: 40px 20px;
+            }
+
+            .cta-section {
+                padding: 30px 20px;
+                margin-top: 20px;
+            }
+
+            .cta-section h2 {
+                font-size: 2em;
+            }
+
+            .cta-section p {
+                font-size: 1.1em;
+                margin-bottom: 20px;
+            }
+
+            .cta-button {
+                font-size: 1.1em;
             }
 
             iframe {
@@ -309,79 +337,87 @@
             }
 
             iframe {
-                max-height: 400px;
+                max-height: 300px;
+            }
+
+            .cta-section h2 {
+                font-size: 1.8em;
+            }
+
+            .cta-section p {
+                font-size: 1em;
+            }
+
+            .cta-button {
+                font-size: 1.2em;
+                padding: 10px 15px;
             }
         }
     </style>
 </head>
-
 <body>
 
-    <header>
-        <img src="images/logo.png" alt="Logo da empresa">
-        <h1>Deixe o seu Ar-Condicionado Limpo e Funcional!</h1>
-        <p>Garanta um ambiente mais saudável e eficiente com nossa higienização profissional.</p>
-    </header>
+<header>
+    <img src="images/logo.png" alt="Logo da empresa">
+    <h1>Deixe o seu Ar-Condicionado Limpo e Funcional!</h1>
+    <p>Garanta um ambiente mais saudável e eficiente com nossa higienização profissional.</p>
+</header>
 
-    <!-- Ícones de Redes Sociais -->
-    <div class="social-links">
-        <a href="https://www.instagram.com/alfaar.refrigeracao021/" target="_blank">
-            <img src="images/icon-instagram.png" alt="Instagram"> @alfaar.refrigeracao021
-        </a>
-        <a href="https://wa.me/5521977342076" target="_blank">
-            <img src="images/icon-wpp.png" alt="WhatsApp"> (21) 97734-2076
-        </a>
-    </div>
+<!-- Ícones de Redes Sociais -->
+<div class="social-links">
+    <a href="https://www.instagram.com/alfaar.refrigeracao021/" target="_blank">
+        <img src="images/icon-instagram.png" alt="Instagram"> @alfaar.refrigeracao021
+    </a>
+    <a href="https://wa.me/5521977342076" target="_blank">
+        <img src="images/icon-wpp.png" alt="WhatsApp"> (21) 97734-2076
+    </a>
+</div>
 
-    <div class="main-content">
-        <!-- Vantagens lado a lado -->
-        <section class="benefits">
-            <div class="benefit-item">
-                <h3>Saúde e Bem-Estar</h3>
-                <p>Com a higienização regular, eliminamos bactérias e fungos, melhorando a qualidade do ar em sua casa ou empresa.</p>
-            </div>
-            <div class="benefit-item">
-                <h3>Eficiência Energética</h3>
-                <p>A limpeza de filtros e componentes aumenta a eficiência do seu ar-condicionado, economizando energia e dinheiro.</p>
-            </div>
-            <div class="benefit-item">
-                <h3>Longa Vida Útil</h3>
-                <p>A manutenção adequada garante que o seu aparelho tenha uma vida útil mais longa, evitando quebras e custos extras.</p>
-            </div>
-        </section>
-
-        <!-- Vídeo e Ofertas Exclusivas -->
-        <section class="video-container">
-            <div class="video-wrapper">
-                <iframe src="https://www.youtube.com/embed/rfNJUbR_AK4?autoplay=1" frameborder="0"
-                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-
-            <section class="special-offers">
-                <h2>Ofertas Exclusivas!</h2>
-                <div class="offer-item">
-                    <p>Desconto de 10% na primeira higienização de ar-condicionado para novos clientes!</p>
-                    <a href="https://wa.me/5521977342076?text=Gostaria%20de%20agendar%20uma%20higienização%20com%20desconto."
-                        class="cta-button"><span class="hand-icon">👉</span>Aproveite Agora!</a>
-                </div>
-                <div class="offer-item">
-                    <p>Promoção: Higienização completa + revisão gratuita do sistema de ar-condicionado por um preço imperdível!</p>
-                    <a href="https://wa.me/5521977342076?text=Quero%20saber%20mais%20sobre%20a%20promoção%20de%20higienização."
-                        class="cta-button"><span class="hand-icon">👉</span>Saiba Mais!</a>
-                </div>
-            </section>
-        </section>
-    </div>
-
-    <!-- Chamada para ação -->
-    <section class="cta-section">
-        <h2>Deixe seu ar mais puro: Agende já sua Higienização de Ar-Condicionado!</h2>
-        <p>Não comprometa a qualidade do ar que você e sua família ou equipe respiram. Elimine impurezas, bactérias e aumente a eficiência do seu aparelho com nossa higienização profissional.</p>
-        <a href="https://wa.me/5521977342076" class="cta-button">
-            <span class="hand-icon">⚠️</span>Clique Aqui e Fale com Nosso Especialista
-        </a>
+<div class="main-content">
+    <!-- Vantagens lado a lado -->
+    <section class="benefits">
+        <div class="benefit-item">
+            <h3>Saúde e Bem-Estar</h3>
+            <p>Com a higienização regular, eliminamos bactérias e fungos, melhorando a qualidade do ar em sua casa ou empresa.</p>
+        </div>
+        <div class="benefit-item">
+            <h3>Eficiência Energética</h3>
+            <p>A limpeza de filtros e componentes aumenta a eficiência do seu ar-condicionado, economizando energia e dinheiro.</p>
+        </div>
+        <div class="benefit-item">
+            <h3>Longa Vida Útil</h3>
+            <p>A manutenção adequada garante que o seu aparelho tenha uma vida útil mais longa, evitando quebras e custos extras.</p>
+        </div>
     </section>
 
-</body>
+    <!-- Vídeo e Ofertas Exclusivas -->
+    <section class="video-container">
+        <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/rfNJUbR_AK4?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
 
+        <section class="special-offers">
+            <h2>Ofertas Exclusivas!</h2>
+            <div class="offer-item">
+                <p>Desconto de 10% na primeira higienização de ar-condicionado para novos clientes!</p>
+                <a href="https://wa.me/5521977342076?text=Gostaria%20de%20agendar%20uma%20higienização%20com%20desconto." class="cta-button"><span class="hand-icon">👉</span>Aproveite Agora!</a>
+            </div>
+            <div class="offer-item">
+                <p>Promoção: Higienização completa + revisão gratuita do sistema de ar-condicionado por um preço imperdível!</p>
+                <a href="https://wa.me/5521977342076?text=Quero%20saber%20mais%20sobre%20a%20promoção%20de%20higienização." class="cta-button"><span class="hand-icon">👉</span>Saiba Mais!</a>
+            </div>
+        </section>
+    </section>
+</div>
+
+<!-- Chamada para ação -->
+<section class="cta-section">
+    <h2>Deixe seu ar mais puro: Agende já sua Higienização de Ar-Condicionado!</h2>
+    <p>Não comprometa a qualidade do ar que você e sua família ou equipe respiram. Elimine impurezas, bactérias e aumente a eficiência do seu aparelho com nossa higienização profissional.</p>
+    <a href="https://wa.me/5521977342076" class="cta-button">
+        <span class="hand-icon">⚠️</span>Clique Aqui e Fale com Nosso Especialista
+    </a>
+</section>
+
+</body>
 </html>
