@@ -9,13 +9,13 @@
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(to right, #003366, #0077b6); /* Gradiente azul marinho para azul mais claro */
+            background: linear-gradient(to right, #003366, #0077b6); /* Fundo gradiente */
             color: #333;
             overflow-x: hidden;
         }
 
         header {
-            background-color: rgba(0, 51, 102, 0.9); /* Azul escuro com transparência */
+            background-color: rgba(0, 51, 102, 0.9);
             color: white;
             padding: 40px 0;
             text-align: center;
@@ -23,7 +23,7 @@
         }
 
         header img {
-            height: 120px;
+            height: 180px;
             margin-bottom: 20px;
         }
 
@@ -38,352 +38,375 @@
             margin-top: 10px;
         }
 
-        /* Ícones e Links */
-        .social-links {
-            font-size: 1.5em;
-            margin-top: 20px;
+        /* Seção do Vídeo e Vantagens */
+        .video-vantagens-section {
             display: flex;
             justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;  /* Isso ajuda a garantir que os ícones não saiam da tela */
-        }
-
-        .social-links a {
-            color: white;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            justify-content: center;  /* Garantir que o conteúdo esteja centralizado */
-            padding: 10px;
-        }
-
-        .social-links a:hover {
-            text-decoration: underline;
-        }
-
-        .social-links img {
-            width: 30px; /* Tamanho dos ícones */
-            height: 30px;
-            vertical-align: middle;
-        }
-
-        .main-content {
-            max-width: 1200px;
-            margin: 0 auto;
+            align-items: flex-start;
             padding: 40px 20px;
-            background-color: rgba(255, 255, 255, 0.95); /* Fundo suave e opaco */
-            border-radius: 20px;
-            box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.1);
-            margin-top: 40px;
-            display: flex;
-            flex-direction: column;
-            gap: 40px;
+            background: linear-gradient(to right, #003366, #0077b6);
+            flex-wrap: wrap;
+            max-width: 100%;
         }
 
-        /* Vantagens lado a lado */
-        .benefits {
-            display: flex;
-            justify-content: space-between;
-            gap: 20px;
-        }
-
-        .benefit-item {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            text-align: center;
-            color: #003366;
-            cursor: pointer;
-            flex: 1;
-            margin-bottom: 20px;
-        }
-
-        .benefit-item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .benefit-item h3 {
-            font-size: 1.5em;
-            margin-bottom: 15px;
-            color: #0077b6;
-        }
-
-        .benefit-item p {
-            font-size: 1em;
-            line-height: 1.5;
-        }
-
-        /* Estilo do vídeo */
         .video-container {
-            display: flex;
-            justify-content: flex-start; /* Faz o vídeo se alinhar à esquerda */
-            align-items: center;
-            position: relative;
-            gap: 20px;
-            width: 100%;
-            padding-left: 30px; /* Distância maior da margem esquerda */
-            padding-right: 20px; /* Ajustando o espaço à direita */
+            flex: 1;
+            max-width: 100%; /* Garantir que ocupe toda a largura */
+            margin-right: 20px;
         }
 
-        /* Ajustando o tamanho do vídeo para 9:16 */
-        .video-wrapper {
-            position: relative;
+        .video-container iframe {
             width: 100%;
-            max-width: 320px;  /* Mantendo o tamanho máximo */
-            height: 0;
-            padding-bottom: 47%; /* 16 / 9 * 100 para obter a altura proporcional */
-            overflow: hidden;
-            background: #000;
-            border-radius: 15px;
+            height: auto;
+            max-width: 387px;
+            aspect-ratio: 9 / 16;
         }
 
-        /* Mantendo o iframe com a proporção */
-        .video-wrapper iframe {
+        .vantagens-container {
+            flex: 1;
+            max-width: 100%; /* Garantir que ocupe toda a largura */
+            padding-left: 20px;
+            color: white;
+        }
+
+        .vantagens-container h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #fff;
+            text-align: left;
+            font-weight: bold;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        /* Seção de Oferta e Contatos */
+        .offer-contact-section {
+            padding: 40px 20px;
+            background: linear-gradient(to right, #003366, #0077b6);
+            text-align: center;
+        }
+
+        /* Seção de Oferta - Com Imagem de Fundo */
+        .offer-section {
+            text-align: center;
+            padding: 50px 20px;
+            color: white;
+            margin-top: 50px;
+            border-radius: 0px;
+            box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.1);
+            position: relative;
+            background-image: url('images/template-ar.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        /* Adicionando um filtro escuro sobre a imagem para aumentar o contraste */
+        .offer-section::before {
+            content: "";
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            z-index: 1; /* O filtro fica atrás do conteúdo */
         }
 
-        /* Estilo da seção de ofertas */
-        .special-offers {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            background-color: #f0f8ff; /* Fundo suave azul claro */
-            padding: 67px;
-            border-radius: 15px;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-            border: 2px solid #003366; /* Borda azul escuro para contrastar */
-            text-align: center;
-            padding-left: 30px;
-            padding-right: 30px;
-            max-width: 600px;  /* Ajustando a largura para ficar mais alinhada com o vídeo */
-            margin: 0 auto;
-            box-sizing: border-box;  /* Garantir que o padding não quebre a largura */
-        }
-
-        .offer-item {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            color: #003366;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .offer-item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .offer-item p {
-            font-size: 1.1em;
-            margin-bottom: 15px;
-            color: #003366;
-        }
-
-        .cta-button {
-            background-color: #003366;
-            color: white;
-            padding: 12px 20px;
-            border-radius: 5px;
-            text-decoration: none;
-            transition: background-color 0.3s ease;
-            font-weight: bold;
-            display: inline-flex;
-            align-items: center;
-        }
-
-        .cta-button:hover {
-            background-color: #005b73;
-        }
-
-        /* Animação da mãozinha piscando */
-        .cta-button .hand-icon {
-            margin-right: 10px; /* Mãozinhas antes do texto */
-            animation: blink 1s infinite;
-        }
-
-        @keyframes blink {
-            0%, 50% {
-                opacity: 1;
-            }
-            25%, 75% {
-                opacity: 0.5;
-            }
-        }
-
-        /* Chamada para ação */
-        .cta-section {
-            background-image: url('images/template-ar.jpeg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            color: white;
-            text-align: center;
-            padding: 50px 20px;
-            margin-top: 50px;
-            border-radius: 15px;
-            box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.1);
-            position: relative;
-        }
-
-        .cta-section::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgba(0, 0, 0, 0.6);
-            border-radius: 15px;
-            z-index: 0;
-        }
-
-        .cta-section h2,
-        .cta-section p,
-        .cta-section a {
-            position: relative;
-            z-index: 1;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
-        }
-
-        .cta-section h2 {
-            font-size: 2.5em;
+        /* Garantindo que o conteúdo da oferta fique acima do filtro */
+        .offer-section h2,
+        .offer-section p {
+            font-size: 1.8em;
             margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+            position: relative;
+            z-index: 2;
         }
 
-        .cta-section p {
-            font-size: 1.2em;
-            margin-bottom: 30px;
-        }
-
-        .cta-section a {
+        .offer-button {
+            display: inline-flex;
             font-size: 1.5em;
             background-color: #003366;
             color: white;
             padding: 15px 30px;
             border-radius: 5px;
             text-decoration: none;
-            transition: background-color 0.3s ease;
-            display: inline-flex;
             align-items: center;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+            z-index: 2;
+            position: relative;
         }
 
-        .cta-section a:hover {
+        .offer-button:hover {
             background-color: #005b73;
         }
 
-        @media screen and (max-width: 768px) {
-            .main-content {
-                flex-direction: column;
-                align-items: center;
-            }
+        .offer-button .hand-icon {
+            font-size: 2em;
+            margin-right: 10px;
+            animation: bounce 1s infinite;
+        }
 
-            .benefits {
-                flex-direction: column;
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
             }
-
-            .video-container {
-                flex-direction: column;
-                align-items: center;
+            40% {
+                transform: translateY(-10px);
             }
-
-            .special-offers {
-                width: 100%;
-                padding: 40px 20px;
-                max-width: 90%;  /* Largura máxima de 90% para não ultrapassar a tela */
-            }
-
-            iframe {
-                max-width: 100%;
-                height: auto;
+            60% {
+                transform: translateY(-5px);
             }
         }
 
-        @media screen and (max-width: 480px) {
-            .cta-section a {
-                font-size: 1.2em;
+        .contact-info {
+            color: white;
+        }
+
+        .contact-info a {
+            display: inline-flex;
+            margin-top: 20px;
+            font-size: 1.5em;
+            color: white;
+            text-decoration: none;
+            background-color: #003366;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            gap: 10px;
+        }
+
+        .contact-info a.instagram {
+            background-color: #e4405f;
+        }
+
+        .contact-info a.whatsapp {
+            background-color: #25D366;
+        }
+
+        .contact-info a:hover {
+            background-color: #005b73;
+        }
+
+        .contact-info img {
+            width: 30px;
+        }
+
+        /* Seção de Serviços */
+        .services-section {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: white;
+        }
+
+        .services-section img {
+            max-width: 500px;
+            height: auto;
+            margin-bottom: 30px;
+        }
+
+        .services-section .highlight-line {
+            width: 80%;
+            height: 5px;
+            background: linear-gradient(to right, #003366, #0077b6);
+            margin: 20px auto;
+            border-radius: 5px;
+            position: relative;
+        }
+
+        .services-section .highlight-line::before,
+        .services-section .highlight-line::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            width: 8px;
+            height: 8px;
+            border: 2px solid #003366;
+            background-color: transparent;
+            transform: translateY(-50%);
+        }
+
+        .services-section .highlight-line::before {
+            left: -4px;
+            background-color: #003366;
+        }
+
+        .services-section .highlight-line::after {
+            right: -4px;
+            background-color: #0077b6;
+            border-color: #0077b6;
+        }
+
+        .services-list {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+        }
+
+        .service-item {
+            font-size: 1.2em;
+            color: #003366;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .service-item span {
+            font-size: 1.5em;
+        }
+
+        /* Estilos para a seção de vantagens com visual de SmartArt */
+        .vantagens-smartart {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .vantagem-item {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .vantagem-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .vantagem-icon {
+            font-size: 3em;
+            color: #003366;
+            background-color: #f0f4f7;
+            padding: 10px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 60px;
+            height: 60px;
+        }
+
+        .vantagem-text h3 {
+            font-size: 1.8em;
+            margin: 0;
+            color: #003366;
+        }
+
+        .vantagem-text p {
+            font-size: 1.2em;
+            color: #666;
+            margin-top: 10px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .video-vantagens-section {
+                flex-direction: column;
+                align-items: center;
             }
 
-            iframe {
-                max-height: 400px;
+            .video-container,
+            .vantagens-container {
+                max-width: 100%;
+                margin: 0;
+            }
+
+            .services-list {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .service-item {
+                font-size: 1em;
+                margin-bottom: 20px;
+            }
+
+            .vantagens-smartart {
+                flex-direction: column;
             }
         }
     </style>
 </head>
 <body>
 
-<header>
-    <img src="images/logo.png" alt="Logo da empresa">
-    <h1>Deixe o seu Ar-Condicionado Limpo e Funcional!</h1>
-    <p>Garanta um ambiente mais saudável e eficiente com nossa higienização profissional.</p>
-</header>
+    <header>
+        <img src="images/logo.png" alt="Logo da empresa">
+        <h1>Soluções Completas para Climatização e Refrigeração</h1>
+        <p>Experiência, qualidade e eficiência em serviços de climatização e refrigeração para residências e empresas.</p>
+    </header>
 
-<!-- Ícones de Redes Sociais -->
-<div class="social-links">
-    <a href="https://www.instagram.com/alfaar.refrigeracao021/" target="_blank">
-        <img src="images/icon-instagram.png" alt="Instagram"> @alfaar.refrigeracao021
-    </a>
-    <a href="https://wa.me/5521977342076" target="_blank">
-        <img src="images/icon-wpp.png" alt="WhatsApp"> (21) 97734-2076
-    </a>
-</div>
+    <!-- Seção de Serviços -->
+    <div class="services-section">
+        <img src="images/icon-servicos.png" alt="Ícone de Serviços">
+        <h2 class="services-title">Como Podemos Atender Suas Necessidades:</h2>
+        <div class="highlight-line"></div>
+        <div class="services-list">
+            <div class="service-item"><span>❄️</span> Instalação e Manutenção de Ar-Condicionado</div>
+            <div class="service-item"><span>❄️</span> Reparos em Equipamentos de Refrigeração</div>
+            <div class="service-item"><span>❄️</span> Climatização e Refrigeração Comercial</div>
+        </div>
+    </div>
 
-<div class="main-content">
-    <!-- Vantagens lado a lado -->
-    <section class="benefits">
-        <div class="benefit-item">
-            <h3>Saúde e Bem-Estar</h3>
-            <p>Com a higienização regular, eliminamos bactérias e fungos, melhorando a qualidade do ar em sua casa ou empresa.</p>
+    <!-- Seção de Contato -->
+    <div class="offer-contact-section">
+        <div class="contact-info">
+            <h2>Entre em Contato Conosco:</h2>
+            <a href="https://www.instagram.com/alfaar.refrigeracao021" class="instagram">
+                <img src="images/icon-instagram.png" alt="Instagram">
+                Instagram
+            </a>
+            <a href="https://wa.me/5521977342076" class="whatsapp">
+                <img src="images/icon-wpp.png" alt="WhatsApp">
+                WhatsApp
+            </a>
         </div>
-        <div class="benefit-item">
-            <h3>Eficiência Energética</h3>
-            <p>A limpeza de filtros e componentes aumenta a eficiência do seu ar-condicionado, economizando energia e dinheiro.</p>
-        </div>
-        <div class="benefit-item">
-            <h3>Longa Vida Útil</h3>
-            <p>A manutenção adequada garante que o seu aparelho tenha uma vida útil mais longa, evitando quebras e custos extras.</p>
-        </div>
-    </section>
+    </div>
 
-    <!-- Vídeo e Ofertas Exclusivas -->
-    <section class="video-container">
-        <div class="video-wrapper">
-            <iframe src="https://www.youtube.com/embed/rfNJUbR_AK4?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <!-- Seção do Vídeo e Vantagens -->
+    <div class="video-vantagens-section">
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/rfNJUbR_AK4?autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
-
-        <section class="special-offers">
-            <h2>Ofertas Exclusivas!</h2>
-            <div class="offer-item">
-                <p>Desconto de 10% na primeira higienização de ar-condicionado para novos clientes!</p>
-                <a href="https://wa.me/5521977342076?text=Gostaria%20de%20agendar%20uma%20higienização%20com%20desconto." class="cta-button"><span class="hand-icon">👉</span>Aproveite Agora!</a>
+        <div class="vantagens-container">
+            <h2>Vantagens de Contratar Nossos Serviços:</h2>
+            <div class="vantagens-smartart">
+                <div class="vantagem-item">
+                    <span class="vantagem-icon">⚡</span>
+                    <div class="vantagem-text">
+                        <h3>Atendimento Ágil e Personalizado</h3>
+                        <p>Receba um atendimento rápido e adaptado às suas necessidades.</p>
+                    </div>
+                </div>
+                <div class="vantagem-item">
+                    <span class="vantagem-icon">🔧</span>
+                    <div class="vantagem-text">
+                        <h3>Equipamentos Modernos</h3>
+                        <p>Utilizamos tecnologia de ponta para garantir eficiência.</p>
+                    </div>
+                </div>
+                <div class="vantagem-item">
+                    <span class="vantagem-icon">✔️</span>
+                    <div class="vantagem-text">
+                        <h3>Serviços com Garantia de Qualidade</h3>
+                        <p>Oferecemos garantias para proporcionar tranquilidade aos nossos clientes.</p>
+                    </div>
+                </div>
             </div>
-            <div class="offer-item">
-                <p>Promoção: Higienização completa + revisão gratuita do sistema de ar-condicionado por um preço imperdível!</p>
-                <a href="https://wa.me/5521977342076?text=Quero%20saber%20mais%20sobre%20a%20promoção%20de%20higienização." class="cta-button"><span class="hand-icon">👉</span>Saiba Mais!</a>
-            </div>
-        </section>
-    </section>
-</div>
+        </div>
+    </div>
 
-<!-- Chamada para ação -->
-<section class="cta-section">
-    <h2>Deixe seu ar mais puro: Agende já sua Higienização de Ar-Condicionado!</h2>
-    <p>Não comprometa a qualidade do ar que você e sua família ou equipe respiram. Elimine impurezas, bactérias e aumente a eficiência do seu aparelho com nossa higienização profissional.</p>
-<a href="https://wa.me/5521977342076" class="cta-button">
-    <span class="hand-icon">⚠️</span>Clique Aqui e Fale com Nosso Especialista
-</a>
-
-</section>
+    <!-- Seção de Oferta -->
+    <div class="offer-section">
+        <h2>Não Perca a Nossa Oferta Exclusiva!</h2>
+        <p>Entre em contato conosco hoje e aproveite as melhores condições para serviços de refrigeração.</p>
+        <a href="https://wa.me/5521977342076?text=Gostaria%20de%20saber%20mais%20sobre%20a%20oferta%20exclusiva!" class="offer-button">
+            <span class="hand-icon">👉</span> Aproveite Agora
+        </a>
+    </div>
 
 </body>
 </html>
