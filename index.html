@@ -170,20 +170,25 @@
             font-size: 1.5em;
             color: white;
             text-decoration: none;
-            background-color: #003366;
-            padding: 10px 20px;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
+            align-items: center;
             gap: 10px;
         }
 
         .contact-info a.instagram {
-            background-color: white;
+            color: white; /* Muda o texto do Instagram para branco */
         }
 
         .contact-info a.whatsapp {
-            background-color: white;
+            color: white; /* Muda o texto do WhatsApp para branco */
+        }
 
+        .contact-info a:hover {
+            opacity: 0.8;
+        }
+
+        .contact-info img {
+            width: 30px;
+        }
 
         /* Seção de Serviços */
         .services-section {
@@ -359,11 +364,11 @@
             <h2>Entre em Contato Conosco:</h2>
             <a href="https://www.instagram.com/alfaar.refrigeracao021" class="instagram">
                 <img src="images/icon-instagram.png" alt="Instagram">
-                Instagram
+                @alfaar.refrigeracao021
             </a>
             <a href="https://wa.me/5521977342076" class="whatsapp">
                 <img src="images/icon-wpp.png" alt="WhatsApp">
-                WhatsApp
+                (21) 97734-2076
             </a>
         </div>
     </div>
@@ -406,7 +411,7 @@
         <h2>Não Perca a Nossa Oferta Exclusiva!</h2>
         <p>Entre em contato conosco hoje e aproveite as melhores condições para serviços de refrigeração.</p>
         <a href="https://wa.me/5521977342076?text=Gostaria%20de%20saber%20mais%20sobre%20a%20oferta%20exclusiva!" class="offer-button">
-            <span class="hand-icon">👉</span> Aproveite Agora!
+            <span class="hand-icon">👉</span> Aproveite Agora
         </a>
     </div>
 
