@@ -101,7 +101,6 @@
             background-repeat: no-repeat;
         }
 
-        /* Adicionando um filtro escuro sobre a imagem para aumentar o contraste */
         .offer-section::before {
             content: "";
             position: absolute;
@@ -110,10 +109,9 @@
             width: 100%;
             height: 100%;
             background-color: rgba(0, 0, 0, 0.4);
-            z-index: 1; /* O filtro fica atrás do conteúdo */
+            z-index: 1;
         }
 
-        /* Garantindo que o conteúdo da oferta fique acima do filtro */
         .offer-section h2,
         .offer-section p {
             font-size: 1.8em;
@@ -175,11 +173,11 @@
         }
 
         .contact-info a.instagram {
-            color: white; /* Muda o texto do Instagram para branco */
+            color: #e4405f;
         }
 
         .contact-info a.whatsapp {
-            color: white; /* Muda o texto do WhatsApp para branco */
+            color: #25D366;
         }
 
         .contact-info a:hover {
@@ -201,7 +199,7 @@
             max-width: 500px;
             height: auto;
             margin-bottom: 30px;
-            width: 80%; /* Garantir que a imagem seja responsiva */
+            width: 80%;
         }
 
         .services-section .highlight-line {
@@ -240,7 +238,7 @@
             display: flex;
             justify-content: center;
             gap: 50px;
-            flex-wrap: wrap; /* Permite que a lista se organize em várias linhas em telas menores */
+            flex-wrap: wrap;
         }
 
         .service-item {
@@ -258,54 +256,15 @@
             font-size: 1.5em;
         }
 
-        /* Estilos para a seção de vantagens com visual de SmartArt */
-        .vantagens-smartart {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .vantagem-item {
-            background-color: #ffffff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .vantagem-item:hover {
-            transform: translateY(-10px);
-        }
-
-        .vantagem-icon {
-            font-size: 3em;
-            color: #003366;
-            background-color: #f0f4f7;
-            padding: 10px;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 60px;
-            height: 60px;
-        }
-
-        .vantagem-text h3 {
-            font-size: 1.8em;
-            margin: 0;
-            color: #003366;
-        }
-
-        .vantagem-text p {
-            font-size: 1.2em;
-            color: #666;
-            margin-top: 10px;
-        }
-
         @media screen and (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            header p {
+                font-size: 1em;
+            }
+
             .video-vantagens-section {
                 flex-direction: column;
                 align-items: center;
@@ -411,7 +370,7 @@
         <h2>Não Perca a Nossa Oferta Exclusiva!</h2>
         <p>Entre em contato conosco hoje e aproveite as melhores condições para serviços de refrigeração.</p>
         <a href="https://wa.me/5521977342076?text=Gostaria%20de%20saber%20mais%20sobre%20a%20oferta%20exclusiva!" class="offer-button">
-            <span class="hand-icon">👉</span> Aproveite Agora
+            <span class="hand-icon">👉</span> Aproveite Agora!
         </a>
     </div>
 
