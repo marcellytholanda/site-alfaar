@@ -253,7 +253,7 @@
             display: flex;
             align-items: center;
             gap: 10px;
-            flex: 1 1 30%; /* Permite que os itens ocupem até 30% da largura */
+            flex: 1 1 30%; /* Agora os itens podem ocupar até 30% da largura */
             margin: 10px;
         }
 
@@ -309,17 +309,6 @@
         }
 
         @media screen and (max-width: 768px) {
-            .video-vantagens-section {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .video-container,
-            .vantagens-container {
-                max-width: 100%;
-                margin: 0;
-            }
-
             .services-list {
                 flex-direction: column;
                 align-items: center;
@@ -328,6 +317,7 @@
             .service-item {
                 font-size: 1em;
                 margin-bottom: 20px;
+                flex: 1 1 100%; /* Agora os itens ocupam 100% da largura no mobile */
             }
 
             .services-section img {
@@ -337,6 +327,24 @@
 
             .vantagens-smartart {
                 flex-direction: column;
+            }
+
+            /* Ajustando o cabeçalho no mobile */
+            header {
+                padding: 20px 10px; /* Menos padding */
+            }
+
+            header img {
+                height: 120px; /* Logo menor no mobile */
+                margin-bottom: 10px;
+            }
+
+            header h1 {
+                font-size: 1.8em; /* Reduzindo o tamanho da fonte */
+            }
+
+            header p {
+                font-size: 1em; /* Reduzindo o tamanho da fonte */
             }
         }
     </style>
