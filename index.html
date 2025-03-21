@@ -10,7 +10,7 @@
             margin: 0;
             padding: 0;
             background: linear-gradient(to right, #003366, #0077b6); /* Fundo gradiente */
-            color: #333;
+            color: white; /* Texto branco em todo o corpo */
             overflow-x: hidden;
         }
 
@@ -39,128 +39,20 @@
             margin-top: 10px;
         }
 
-        /* Seção do Vídeo e Vantagens */
-        .video-vantagens-section {
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            padding: 40px 20px;
-            background: linear-gradient(to right, #003366, #0077b6);
-            flex-wrap: wrap;
-            max-width: 100%;
-        }
-
-        .video-container {
-            flex: 1;
-            max-width: 100%; /* Garantir que ocupe toda a largura */
-            margin-right: 20px;
-        }
-
-        .video-container iframe {
-            width: 100%;
-            height: auto;
-            max-width: 387px;
-            aspect-ratio: 9 / 16;
-        }
-
-        .vantagens-container {
-            flex: 1;
-            max-width: 100%; /* Garantir que ocupe toda a largura */
-            padding-left: 20px;
-            color: white;
-        }
-
-        .vantagens-container h2 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            color: #fff;
-            text-align: left;
-            font-weight: bold;
-            animation: fadeIn 1s ease-in-out;
-        }
-
-        /* Seção de Oferta e Contatos */
+        /* Seção de Contato */
         .offer-contact-section {
             padding: 40px 20px;
             background: linear-gradient(to right, #003366, #0077b6);
             text-align: center;
         }
 
-        /* Seção de Oferta - Com Imagem de Fundo */
-        .offer-section {
-            text-align: center;
-            padding: 50px 20px;
-            color: white;
-            margin-top: 50px;
-            border-radius: 0px;
-            box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.1);
-            position: relative;
-            background-image: url('images/template-ar.jpeg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-
-        /* Adicionando um filtro escuro sobre a imagem para aumentar o contraste */
-        .offer-section::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.4);
-            z-index: 1; /* O filtro fica atrás do conteúdo */
-        }
-
-        /* Garantindo que o conteúdo da oferta fique acima do filtro */
-        .offer-section h2,
-        .offer-section p {
-            font-size: 1.8em;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-            position: relative;
-            z-index: 2;
-        }
-
-        .offer-button {
-            display: inline-flex;
-            font-size: 1.5em;
-            background-color: #003366;
-            color: white;
-            padding: 15px 30px;
-            border-radius: 5px;
-            text-decoration: none;
-            align-items: center;
-            transition: background-color 0.3s ease;
-            margin-top: 20px;
-            z-index: 2;
-            position: relative;
-        }
-
-        .offer-button:hover {
-            background-color: #005b73;
-        }
-
-        .offer-button .hand-icon {
-            font-size: 2em;
-            margin-right: 10px;
-            animation: bounce 1s infinite;
-        }
-
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% {
-                transform: translateY(0);
-            }
-            40% {
-                transform: translateY(-10px);
-            }
-            60% {
-                transform: translateY(-5px);
-            }
-        }
-
         .contact-info {
+            color: white; /* Texto branco dentro da seção de contato */
+        }
+
+        .contact-info h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
             color: white;
         }
 
@@ -170,171 +62,27 @@
             font-size: 1.5em;
             color: white;
             text-decoration: none;
-            align-items: center;
+            background-color: transparent; /* Sem fundo colorido */
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
             gap: 10px;
         }
 
         .contact-info a.instagram {
-            color: #e4405f;
+            background-color: transparent; /* Fundo transparente para Instagram */
         }
 
         .contact-info a.whatsapp {
-            color: #25D366;
+            background-color: transparent; /* Fundo transparente para WhatsApp */
         }
 
         .contact-info a:hover {
-            opacity: 0.8;
+            background-color: rgba(255, 255, 255, 0.2); /* Efeito de hover */
         }
 
         .contact-info img {
             width: 30px;
-        }
-
-        /* Seção de Serviços */
-        .services-section {
-            text-align: center;
-            padding: 40px 20px;
-            background-color: white;
-        }
-
-        .services-section img {
-            max-width: 500px;
-            height: auto;
-            margin-bottom: 30px;
-            width: 80%; /* Garantir que a imagem seja responsiva */
-        }
-
-        .services-section .highlight-line {
-            width: 80%;
-            height: 5px;
-            background: linear-gradient(to right, #003366, #0077b6);
-            margin: 20px auto;
-            border-radius: 5px;
-            position: relative;
-        }
-
-        .services-section .highlight-line::before,
-        .services-section .highlight-line::after {
-            content: "";
-            position: absolute;
-            top: 50%;
-            width: 8px;
-            height: 8px;
-            border: 2px solid #003366;
-            background-color: transparent;
-            transform: translateY(-50%);
-        }
-
-        .services-section .highlight-line::before {
-            left: -4px;
-            background-color: #003366;
-        }
-
-        .services-section .highlight-line::after {
-            right: -4px;
-            background-color: #0077b6;
-            border-color: #0077b6;
-        }
-
-        .services-list {
-            display: flex;
-            justify-content: center;
-            gap: 50px;
-            flex-wrap: wrap; /* Permite que a lista se organize em várias linhas em telas menores */
-        }
-
-        .service-item {
-            font-size: 1.2em;
-            color: #003366;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            flex: 1 1 30%; /* Permite que os itens ocupem até 30% da largura */
-            margin: 10px;
-        }
-
-        .service-item span {
-            font-size: 1.5em;
-        }
-
-        /* Estilos para a seção de vantagens com visual de SmartArt */
-        .vantagens-smartart {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .vantagem-item {
-            background-color: #ffffff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .vantagem-item:hover {
-            transform: translateY(-10px);
-        }
-
-        .vantagem-icon {
-            font-size: 3em;
-            color: #003366;
-            background-color: #f0f4f7;
-            padding: 10px;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 60px;
-            height: 60px;
-        }
-
-        .vantagem-text h3 {
-            font-size: 1.8em;
-            margin: 0;
-            color: #003366;
-        }
-
-        .vantagem-text p {
-            font-size: 1.2em;
-            color: #666;
-            margin-top: 10px;
-        }
-
-        @media screen and (max-width: 768px) {
-            .video-vantagens-section {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .video-container,
-            .vantagens-container {
-                max-width: 100%;
-                margin: 0;
-            }
-
-            .services-list {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .service-item {
-                font-size: 1em;
-                margin-bottom: 20px;
-            }
-
-            .services-section img {
-                width: 100%;
-                max-width: 300px;
-            }
-
-            .vantagens-smartart {
-                flex-direction: column;
-            }
         }
     </style>
 </head>
@@ -345,18 +93,6 @@
         <h1>Soluções Completas para Climatização e Refrigeração</h1>
         <p>Experiência, qualidade e eficiência em serviços de climatização e refrigeração para residências e empresas.</p>
     </header>
-
-    <!-- Seção de Serviços -->
-    <div class="services-section">
-        <img src="images/icon-servicos.png" alt="Ícone de Serviços">
-        <h2 class="services-title">Como Podemos Atender Suas Necessidades:</h2>
-        <div class="highlight-line"></div>
-        <div class="services-list">
-            <div class="service-item"><span>❄️</span> Instalação e Manutenção de Ar-Condicionado</div>
-            <div class="service-item"><span>❄️</span> Reparos em Equipamentos de Refrigeração</div>
-            <div class="service-item"><span>❄️</span> Climatização e Refrigeração Comercial</div>
-        </div>
-    </div>
 
     <!-- Seção de Contato -->
     <div class="offer-contact-section">
@@ -371,48 +107,6 @@
                 (21) 97734-2076
             </a>
         </div>
-    </div>
-
-    <!-- Seção do Vídeo e Vantagens -->
-    <div class="video-vantagens-section">
-        <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/rfNJUbR_AK4?autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        <div class="vantagens-container">
-            <h2>Vantagens de Contratar Nossos Serviços:</h2>
-            <div class="vantagens-smartart">
-                <div class="vantagem-item">
-                    <span class="vantagem-icon">⚡</span>
-                    <div class="vantagem-text">
-                        <h3>Atendimento Ágil e Personalizado</h3>
-                        <p>Receba um atendimento rápido e adaptado às suas necessidades.</p>
-                    </div>
-                </div>
-                <div class="vantagem-item">
-                    <span class="vantagem-icon">🔧</span>
-                    <div class="vantagem-text">
-                        <h3>Equipamentos Modernos</h3>
-                        <p>Utilizamos tecnologia de ponta para garantir eficiência.</p>
-                    </div>
-                </div>
-                <div class="vantagem-item">
-                    <span class="vantagem-icon">✔️</span>
-                    <div class="vantagem-text">
-                        <h3>Serviços com Garantia de Qualidade</h3>
-                        <p>Oferecemos garantias para proporcionar tranquilidade aos nossos clientes.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Seção de Oferta -->
-    <div class="offer-section">
-        <h2>Não Perca a Nossa Oferta Exclusiva!</h2>
-        <p>Entre em contato conosco hoje e aproveite as melhores condições para serviços de refrigeração.</p>
-        <a href="https://wa.me/5521977342076?text=Gostaria%20de%20saber%20mais%20sobre%20a%20oferta%20exclusiva!" class="offer-button">
-            <span class="hand-icon">👉</span> Aproveite Agora
-        </a>
     </div>
 
 </body>
